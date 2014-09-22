@@ -8,9 +8,12 @@ Installation
 ------------
 
 Download the archive from GitHub, decompress it, and you will have two options:<br>
-1) move the “Kalman” folder into the “libraries” subdirectory inside your Arduino sketchbook directory (you can view your sketchbook location by selecting File→Preferences in the Arduino environment; if there is not already a “libraries” folder in that location, you should create it yourself). Then import it with: #include <Kalman.h>;<br>
-2) move the “Kalman” folder to the sketchbook you want to use it and then import it with: #include "Kalman.h".<br>
+1) move the “Kalman” folder into the “libraries” subdirectory inside your Arduino sketchbook directory (you can view your sketchbook location by selecting File→Preferences in the Arduino environment; if there is not already a “libraries” folder in that location, you should create it yourself). Then import it with:
 
+	#include <Kalman.h>;
+2) move the “Kalman” folder to the sketchbook you want to use it and then import it with:
+
+	#include "Kalman.h";
 After installing the library, restart the Arduino environment so it can find the library.
 
 Kalman Formulas
@@ -42,7 +45,7 @@ But tweaking the values for the process noise and sensor noise is essential to g
 Example
 -------
          
-For large noise reduction, you can try to start from: (see http://interactive-matter.eu/blog/2009/12/18/filtering-sensor-data-with-a-kalman-filter/ for a better description on getting to these values)<br>
+For large noise reduction, you can try to start from (see http://interactive-matter.eu/blog/2009/12/18/filtering-sensor-data-with-a-kalman-filter/ for a better description on getting to these values):<br>
 q = 0.125<br>
 r = 32<br>
 p = 1023 //"large enough to narrow down"
